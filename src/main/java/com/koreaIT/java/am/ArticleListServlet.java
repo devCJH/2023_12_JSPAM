@@ -50,6 +50,7 @@ public class ArticleListServlet extends HttpServlet {
 			
 			List<Map<String, Object>> articleListMap = DBUtil.selectRows(conn, sql);
 			
+			request.setAttribute("itemsInAPage", itemsInAPage);
 			request.setAttribute("page", page);
 			request.setAttribute("totalPageCnt", totalPageCnt);
 			request.setAttribute("articleListMap", articleListMap);
